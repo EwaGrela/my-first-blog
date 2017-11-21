@@ -25,7 +25,7 @@ SECRET_KEY = 'or=h(nbcdju1xnt0##u8nj=sa_ktyz&i)2%35b%&_nbj1ddq#n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['EwaGrela.pythonanywhere.com']
 
 
 # Application definition
