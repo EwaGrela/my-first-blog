@@ -6,27 +6,13 @@
 <body>
 	<section>
 		<h1><a href="">Mój blog</a></h1>
-		<article>
-			<p>Published: 21.11.2017, 12:02</p>
-			<h2><a href="">My first post</a></h2>
-			<p>
-				Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus
-			</p>
-		</article>
-		<article>
-			<p>Published: 21.11.2017, 12:04</p>
-			<h2><a href="">My second post</a></h2>
-			<p>
-				Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus
-			</p>
-		</article>
-		<article>
-			<p>Published: 21.11.2017, 12:06</p>
-			<h2><a href="">My third post</a></h2>
-			<p>
-			Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus	
-			</p>
-		</article>
+		{% for post in posts%}
+			<article>
+				<p>Published: {{post.published_date}}</p>
+				<h1><a href="">{{post.title}}</a></h1>	
+				<p>{{post.text|linebreaksbr}}</p>
+			</article>
+		{% endfor %}
 	</section>
 </body>
 </html>
